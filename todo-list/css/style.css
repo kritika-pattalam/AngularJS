@@ -1,0 +1,13 @@
+ul li{
+	list-style: none;
+}
+.done-true
+{
+	text-decoration:  line-through;
+	color: grey;
+}
+.done-false
+{
+	text-decoration: none;
+	color: #000;
+}
