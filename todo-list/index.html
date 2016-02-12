@@ -7,10 +7,10 @@
   <body>
     <!--angular module-->
     <div ng-controller="TodoCtrl">
-        <h1>Total todos :{{todos.length}}</h1>
+        <h1>{{tasksPending()}} of {{todos.length}} Tasks Pending </h1>
         <ul>
-          <li ng-repeat="list in todos">
-            <input type="checkbox" ng-model="list.done"/>
+          <li ng-repeat="list in todos track by $index">
+            <input type="checkbox" ng-model="list.done" ng-change="onCheckboxChange()"/>
             <span class="done-{{list.done}}">{{list.text}}</span>
           </li>
         </ul> 
